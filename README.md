@@ -71,11 +71,11 @@ npm run e2e:client
 ### Setup With
 
 - [npm](https://www.npmjs.com/) - as package manager
-- [create-react-app] (https://reactjs.org/docs/create-a-new-react-app.html) - as a boilerplate for react
+- [create-react-app](https://reactjs.org/docs/create-a-new-react-app.html) - as a boilerplate for react
 - [reactjs](https://reactjs.org/) - as JavaScript library for building user interfaces
 - [material-ui](https://material-ui.com/) - as UI framework
 - [express](https://expressjs.com/) - as a light-weight web application framework
-- [docker] (https://www.docker.com/) - as a container creation
+- [docker](https://www.docker.com/) - as a container creation
 
 ### Testing
 
