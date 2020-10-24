@@ -3,13 +3,14 @@ describe("Pages", () => {
   const invalidQuery = "invalidquery";
   const productId = "MLA817640315";
   const invalidProductId = "MLA817640315P";
+  const appURL = "http://localhost:3000";
 
   it("Displays Main Page", () => {
-    cy.visit("http://localhost:3000");
+    cy.visit(appURL);
   });
 
   it("Display Search Page with a valid query", () => {
-    cy.visit("http://localhost:3000");
+    cy.visit(appURL);
 
     cy.get('[data-testid="searchBoxField"]').type(query);
     cy.get('[data-testid="searchBoxFieldButton"]').click();
@@ -23,7 +24,7 @@ describe("Pages", () => {
   });
 
   it("Display Search Page with an invalid valid query", () => {
-    cy.visit("http://localhost:3000");
+    cy.visit(appURL);
 
     cy.get('[data-testid="searchBoxField"]').type(invalidQuery);
     cy.get('[data-testid="searchBoxFieldButton"]').click();
@@ -38,7 +39,7 @@ describe("Pages", () => {
   });
 
   it("Display Product Page with a selected product from Search Page", () => {
-    cy.visit("http://localhost:3000");
+    cy.visit(appURL);
 
     cy.get('[data-testid="searchBoxField"]').type(query);
     cy.get('[data-testid="searchBoxFieldButton"]').click();
@@ -54,7 +55,7 @@ describe("Pages", () => {
   });
 
   it("Display Product Page with an invalid product id", () => {
-    cy.visit(`http://localhost:3000/items/${invalidProductId}`);
+    cy.visit(`${appURL}/items/${invalidProductId}`);
 
     cy.get('[data-testid="breadcrumb"]').should("not.exist");
 
